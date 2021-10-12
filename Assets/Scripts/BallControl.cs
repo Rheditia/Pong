@@ -11,9 +11,17 @@ public class BallControl : MonoBehaviour
     public float xInitialForce;
     public float yInitialForce;
 
+    // Skrip GameManager untuk mengakses skor maksimal
+    [SerializeField]
+    private GameManager gameManager;
+
+    // Titik asal lintasan bola saat ini
+    private Vector2 trajectoryOrigin;
+
     // Start is called before the first frame update
     void Start()
     {
+        trajectoryOrigin = transform.position;
         rigidBody2D = GetComponent<Rigidbody2D>();
 
         // Mulai game
@@ -43,6 +51,8 @@ public class BallControl : MonoBehaviour
         // Tentukan nilai acak antara 0 (inklusif) dan 2 (eksklusif)
         float randomDirection = Random.Range(0, 2);
 
+        
+
         // Jika nilainya di bawah 1, bola bergerak ke kiri. 
         // Jika tidak, bola bergerak ke kanan.
         if (randomDirection < 1.0f)
@@ -63,5 +73,16 @@ public class BallControl : MonoBehaviour
 
         // Setelah 2 detik, berikan gaya ke bola
         Invoke("PushBall", 2);
+    }
+
+    // Ketika bola beranjak dari sebuah tumbukan, rekam titik tumbukan tersebut
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        trajectoryOrigin = transform.position;
+    }
+
+    public Vector2 TrajectoryOrigin
+    {
+        get { return trajectoryOrigin; }
     }
 }

@@ -64,10 +64,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\KunalTandon\DottedLine\Scripts\DottedLine.cs" />
+    <Compile Include="Assets\KunalTandon\DottedLine\Scripts\DottedLineDemo.cs" />
     <Compile Include="Assets\Scripts\BallControl.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\SideWall.cs" />
+    <Compile Include="Assets\Scripts\Trajectory.cs" />
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/Unity Repository/Unity2D/2018/Pong/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
