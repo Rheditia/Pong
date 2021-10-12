@@ -51,18 +51,20 @@ public class BallControl : MonoBehaviour
         // Tentukan nilai acak antara 0 (inklusif) dan 2 (eksklusif)
         float randomDirection = Random.Range(0, 2);
 
-        
+        float speed = 500.0f;
+        Vector2 leftDirection = new Vector2(-xInitialForce, yRandomInitialForce).normalized;
+        Vector2 rightDirection = new Vector2(xInitialForce, yRandomInitialForce).normalized;
 
         // Jika nilainya di bawah 1, bola bergerak ke kiri. 
         // Jika tidak, bola bergerak ke kanan.
         if (randomDirection < 1.0f)
         {
             // Gunakan gaya untuk menggerakkan bola ini.
-            rigidBody2D.AddForce(new Vector2(-xInitialForce, yRandomInitialForce));
+            rigidBody2D.AddForce((leftDirection) * speed);
         }
         else
         {
-            rigidBody2D.AddForce(new Vector2(xInitialForce, yRandomInitialForce));
+            rigidBody2D.AddForce((rightDirection) * speed);
         }
     }
 
