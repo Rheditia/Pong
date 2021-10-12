@@ -83,6 +83,7 @@ public class BallControl : MonoBehaviour
         trajectoryOrigin = transform.position;
     }
 
+    // Untuk mengakses informasi titik asal lintasan
     public Vector2 TrajectoryOrigin
     {
         get { return trajectoryOrigin; }
