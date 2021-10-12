@@ -29,6 +29,13 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
+        RacketMovement();
+
+        RacketBoundary();
+    }
+
+    void RacketMovement()
+    {
         // Dapatkan kecepatan raket sekarang.
         Vector2 velocity = rigidBody2D.velocity;
 
@@ -52,7 +59,10 @@ public class PlayerControl : MonoBehaviour
 
         // Masukkan kembali kecepatannya ke rigidBody2D.
         rigidBody2D.velocity = velocity;
+    }
 
+    void RacketBoundary()
+    {
         // Dapatkan posisi raket sekarang.
         Vector3 position = transform.position;
 
