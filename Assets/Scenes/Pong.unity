@@ -609,6 +609,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 6898633770986990337, guid: 4b85b919f9ebe76459f9a15c911b4d43,
+        type: 3}
+      propertyPath: upButton
+      value: 273
+      objectReference: {fileID: 0}
+    - target: {fileID: 6898633770986990337, guid: 4b85b919f9ebe76459f9a15c911b4d43,
+        type: 3}
+      propertyPath: downButton
+      value: 274
+      objectReference: {fileID: 0}
     - target: {fileID: 7434256253120032041, guid: 4b85b919f9ebe76459f9a15c911b4d43,
         type: 3}
       propertyPath: m_LocalPosition.x

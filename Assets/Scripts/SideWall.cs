@@ -6,7 +6,9 @@ public class SideWall : MonoBehaviour
 {
     // Pemain yang akan bertambah skornya jika bola menyentuh dinding ini.
     public PlayerControl player;
-    public GameManager gameManager;
+    //public GameManager gameManager;
+    [SerializeField]
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
